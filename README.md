@@ -23,6 +23,18 @@ Link of the paper will be released soon.
 ## Main results
 ![image](https://user-images.githubusercontent.com/44238026/219563198-4cc596fa-8572-4166-90ca-ff6a7b94a04b.png)
 
+
+## Get started
+You can follow the jupyter notebook in 
+```bash
+ICASSP2023-SaDI/code/jupyter_notebook_SaDI/SaDI_demo.ipynb
+```
+or run
+```bash
+ICASSP2023-SaDI/code/jupyter_notebook_SaDI/run.py
+```
+
+
 ## Further Reading
 
 * [Survey] Qingsong Wen, Tian Zhou, Chaoli Zhang, Weiqi Chen, Ziqing Ma, Junchi Yan, and Liang Sun. "**Transformers in time series: A survey**." arXiv preprint arXiv:2202.07125 (2022). [[paper]](https://arxiv.org/abs/2202.07125)
