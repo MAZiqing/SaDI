@@ -1,59 +1,40 @@
 # SaDI (ICASSP 2023 paper)
 
-SaDI: A Self-adaptive Decomposed Interpretable Framework for Electric Load Forecasting under Extreme Events
+Hengbo Liu, Ziqing Ma, Linxiao Yang, Tian Zhou, Rui Xia, Yi Wang, Qingsong Wen, Liang Sun, "SaDI: A Self-Adaptive Decomposed Interpretable Framework for Electricity Load Forecasting under Extreme Events", in Proc. IEEE 48th International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2023), Rhodes Island, Greece, June 2023.
+
+## Abstract
+Accurate prediction of electric load is crucial in power grid planning and management. In this paper, we solve the electric load forecasting problem under extreme events such as scorching heats. One challenge for accurate forecasting is the lack of training samples under extreme conditions. Also load usually  changes dramatically in these extreme conditions, which calls for interpretable model to make better decisions. 
+In this paper, we propose a novel forecasting framework, named Self-adaptive Decomposed Interpretable framework~(SaDI), which ensembles long-term trend, short-term trend, and period modelings to capture temporal characteristics in different components. The external variable triggered loss is proposed for the imbalanced learning under extreme events. 
+Furthermore, Generalized Additive Model (GAM) is employed in
+the framework for desirable interpretability. The experiments on both Central China electric load and public energy meters from buildings show that the proposed SaDI framework achieves
+average $22.14\%$ improvement compared with the current state-of-
+the-art algorithms in forecasting under extreme events in
+terms of daily mean of normalized RMSE. 
+
+Link of the paper will be released soon.
 
 
+![image](https://user-images.githubusercontent.com/44238026/219562512-941333b9-a121-4d3f-ba61-898a016ec7ce.png)
 
-data
-├─ README.md              <-  README for developers using this data-set
-└─ public_dataset
-|   ├─Peacock_20160101_20171231_15T.csv            <- Peacock site 
-|   ├─Rat_20160101_20171231_15T.csv                <- Rat site
-|   └─Robin_20160101_20171231_15T.csv              <- Robin site
+## Overall framework of SaDI
+<img src="https://user-images.githubusercontent.com/44238026/219563089-b8220c34-1bbf-4f54-ab04-5cdde25d53df.png" width="500">
 
 
-Peacock_20160101_20171231_15T.csv
-Rat_20160101_20171231_15T.csv
-Robin_20160101_20171231_15T.csv
-Weather and cleaned meter electricity data are organized groupby sites from original datasets below.
-In each csv, 10 columns are provided. 1st "dt" column is the timestamp from 2016-01-01 to 2017-12-31 every 15min. 2nd~9th columns are weather features. 10th column is target electricity load.
-**************************
+## Main results
+![image](https://user-images.githubusercontent.com/44238026/219563198-4cc596fa-8572-4166-90ca-ff6a7b94a04b.png)
+
+## Further Reading
+
+* [Survey] Qingsong Wen, Tian Zhou, Chaoli Zhang, Weiqi Chen, Ziqing Ma, Junchi Yan, and Liang Sun. "**Transformers in time series: A survey**." arXiv preprint arXiv:2202.07125 (2022). [[paper]](https://arxiv.org/abs/2202.07125)
+* [Tutorial] Qingsong Wen, Linxiao Yang, Tian Zhou, Liang Sun, "**Robust Time Series Analysis and Applications: An Industrial Perspective**," in the 28th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining (KDD 2022), Washington DC, USA, Aug. 14-18, 2022. [[Website]](https://qingsongedu.github.io/timeseries-tutorial-kdd-2022/)
+* Tian Zhou, Ziqing Ma, Qingsong Wen, Xue Wang, Liang Sun, Rong Jin, "FEDformer: Frequency Enhanced Decomposed Transformer for Long-term Series Forecasting," in Proc. 39th International Conference on Machine Learning (ICML 2022), Baltimore, Maryland, July 17-23, 2022. [[paper](https://arxiv.org/abs/2201.12740)]
+
+
+## Contact
+
+If you have any question or want to use the code, please contact maziqing.mzq@alibaba-inc.com or yangyang.lhb@alibaba-inc.com.
+
+## Acknowledgements
 Citation of BDG2 Data-Set
 Nature Scientific Data (open access)
 Miller, C., Kathirgamanathan, A., Picchetti, B. et al. The Building Data Genome Project 2, energy meter data from the ASHRAE Great Energy Predictor III competition. Sci Data 7, 368 (2020). https://doi.org/10.1038/s41597-020-00712-x.
-@ARTICLE{Miller2020-yc,
-  title     = "The Building Data Genome Project 2, energy meter data from the
-               {ASHRAE} Great Energy Predictor {III} competition",
-  author    = "Miller, Clayton and Kathirgamanathan, Anjukan and Picchetti,
-               Bianca and Arjunan, Pandarasamy and Park, June Young and Nagy,
-               Zoltan and Raftery, Paul and Hobson, Brodie W and Shi, Zixiao
-               and Meggers, Forrest",
-  abstract  = "This paper describes an open data set of 3,053 energy meters
-               from 1,636 non-residential buildings with a range of two full
-               years (2016 and 2017) at an hourly frequency (17,544
-               measurements per meter resulting in approximately 53.6 million
-               measurements). These meters were collected from 19 sites across
-               North America and Europe, with one or more meters per building
-               measuring whole building electrical, heating and cooling water,
-               steam, and solar energy as well as water and irrigation meters.
-               Part of these data was used in the Great Energy Predictor III
-               (GEPIII) competition hosted by the American Society of Heating,
-               Refrigeration, and Air-Conditioning Engineers (ASHRAE) in
-               October-December 2019. GEPIII was a machine learning competition
-               for long-term prediction with an application to measurement and
-               verification. This paper describes the process of data
-               collection, cleaning, and convergence of time-series meter data,
-               the meta-data about the buildings, and complementary weather
-               data. This data set can be used for further prediction
-               benchmarking and prototyping as well as anomaly detection,
-               energy analysis, and building type classification.
-               Machine-accessible metadata file describing the reported data:
-               https://doi.org/10.6084/m9.figshare.13033847",
-  journal   = "Scientific Data",
-  publisher = "Nature Publishing Group",
-  volume    =  7,
-  pages     = "368",
-  month     =  oct,
-  year      =  2020,
-  language  = "en"
-}
